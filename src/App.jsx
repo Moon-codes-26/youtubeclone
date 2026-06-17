@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import Navbar from "./components/Navbar";
@@ -12,7 +12,7 @@ function App() {
   const [query, setQuery] = useState("");
 
   return (
-    <BrowserRouter>
+    <>
       <Navbar onSearch={setQuery} />
 
       <div style={styles.container}>
@@ -26,8 +26,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
-    
+    </>
   );
 }
 
